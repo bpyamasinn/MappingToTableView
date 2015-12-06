@@ -1,0 +1,440 @@
+<html><body><h1>
+        <span id="最初に" class="fragment"></span><a href="#%E6%9C%80%E5%88%9D%E3%81%AB"><i class="fa fa-link"></i></a>最初に</h1>
+    
+    <p>この記事は、<strong>Mac</strong>に<strong>SwiftLint</strong>を導入する方法を記載した記事です。<br>
+    記載時(2015/11/20)のバージョンは下記の通りです。</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>対象</th>
+                <th>バージョン</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SwiftLint</td>
+                <td>0.4.0</td>
+            </tr>
+            <tr>
+                <td>XCode</td>
+                <td>7.1.1</td>
+            </tr>
+            <tr>
+                <td>Mac</td>
+                <td>10.11.1</td>
+            </tr>
+            <tr>
+                <td>Homebrew</td>
+                <td>0.9.5</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h1>
+        <span id="導入方法" class="fragment"></span><a href="#%E5%B0%8E%E5%85%A5%E6%96%B9%E6%B3%95"><i class="fa fa-link"></i></a>導入方法</h1>
+    
+    <h2>
+        <span id="homebrewをインストールする" class="fragment"></span><a href="#homebrew%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>Homebrewをインストールする</h2>
+    
+    <h3>
+        <span id="homebrewをお持ちでない方" class="fragment"></span><a href="#homebrew%E3%82%92%E3%81%8A%E6%8C%81%E3%81%A1%E3%81%A7%E3%81%AA%E3%81%84%E6%96%B9"><i class="fa fa-link"></i></a>Homebrewをお持ちでない方</h3>
+    
+    <p><a href="http://qiita.com/_daisuke/items/d3b2477d15ed2611a058">MacにHomebrewをインストールする</a><br>
+    上記のURLにMacにHomebrewをインストールする方法が記載されていますので、<br>
+    インストールしてください。</p>
+    
+    <h3>
+        <span id="homebrewをお持ちの方" class="fragment"></span><a href="#homebrew%E3%82%92%E3%81%8A%E6%8C%81%E3%81%A1%E3%81%AE%E6%96%B9"><i class="fa fa-link"></i></a>Homebrewをお持ちの方</h3>
+    
+    <p>念のため、<code>Homebrew</code>の<code>update</code>を行ってください</p>
+    
+    <div class="code-frame" data-lang="bash"><div class="highlight"><pre>brew update
+    </pre></div></div>
+    
+    <p>正常に<code>Homebrew</code>の<code>update</code>を行えた後に、念のためバージョンをご確認ください。<br>
+    <strong>2015/11/20</strong>時点の最新バージョンは <strong>0.9.5</strong> です。</p>
+    
+    <div class="code-frame" data-lang="bash"><div class="highlight"><pre>brew --version
+        0.9.5 <span class="o">(</span>git revision 7714<span class="p">;</span> last commit 2015-11-19<span class="o">)</span>
+    </pre></div></div>
+    
+    <h2>
+        <span id="swiftlintをインストールする" class="fragment"></span><a href="#swiftlint%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>SwiftLintをインストールする</h2>
+    
+    <p>ターミナルで下記のコマンドを入力して、実行してください。</p>
+    
+    <div class="code-frame" data-lang="bash"><div class="highlight"><pre>brew install swiftlint
+    </pre></div></div>
+    
+    <h3>
+        <span id="swiftlintのインストールした時のログ" class="fragment"></span><a href="#swiftlint%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9F%E6%99%82%E3%81%AE%E3%83%AD%E3%82%B0"><i class="fa fa-link"></i></a>SwiftLintのインストールした時のログ</h3>
+    
+    <div class="code-frame" data-lang="bash"><div class="highlight"><pre><span class="o">[</span>syamaoka<span class="o">]</span> brew install <span class="nv">swiftlint</span>
+        <span class="o">==</span>&gt; Downloading https://homebrew.bintray.com/bottles/swiftlint-0.4.0.el_capitan.bottle.tar.gz
+        <span class="c">######################################################################## 100.0%</span>
+        <span class="o">==</span>&gt; Pouring swiftlint-0.4.0.el_capitan.bottle.tar.gz
+        🍺  /usr/local/Cellar/swiftlint/0.4.0: <span class="m">215</span> files, 55M
+        <span class="o">[</span>syamaoka<span class="o">]</span> swiftlint version
+        0.4.0
+    </pre></div></div>
+    
+    <p>SwiftLintのバージョンが<strong>0.4.0</strong>であることを確認出来れば、SwiftLintのインストール完了です！</p>
+    
+    <p><font color="red">※注意：SwiftLintのバージョンが低い場合はConfigureを設定できない場合があるので、最新のものを入れるのを推奨致します。<font></font></font></p>
+    
+    <h2>
+        <span id="xcodeのビルド時にlintされるように設定する" class="fragment"></span><a href="#xcode%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E6%99%82%E3%81%ABlint%E3%81%95%E3%82%8C%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>XCodeのビルド時にLintされるように設定する</h2>
+    
+    <ol>
+        <li>SwiftLintを適用したいプロジェクトを開きます</li>
+        <li>
+            <code>TARGETS-&gt;Bulid Phases</code>を開きます</li>
+        <li>左上にある+ボタンをクリックし<code>New Run Script Phase</code>をクリックします。</li>
+        <li>
+            <code>Run Script</code>の項目に、下記のスクリプトに置換するとBuild時に静的解析を行うようになります。</li>
+    </ol>
+    
+    <div class="code-frame" data-lang="sh"><div class="highlight"><pre><span class="k">if</span> which swiftlint &gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+        swiftlint
+        <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s2">"SwiftLint does not exist, download from https://github.com/realm/SwiftLint"</span>
+        <span class="k">fi</span>
+    </pre></div></div>
+    
+    <p><strong>画像で手順も用意したので、順番通りに設定していけば大丈夫です。</strong><br>
+    <a href="https://qiita-image-store.s3.amazonaws.com/0/30359/6533d39e-c609-e5da-95f6-237dda1f1564.png" target="_blank"><img width="400" alt="swiftlint2.png" src="https://qiita-image-store.s3.amazonaws.com/0/30359/6533d39e-c609-e5da-95f6-237dda1f1564.png"></a></p>
+    
+    <p>公式のXcode設定ページ：<a href="https://github.com/realm/SwiftLint#configuration" class="autolink">https://github.com/realm/SwiftLint#configuration</a></p>
+    
+    <h2>
+        <span id="動作確認" class="fragment"></span><a href="#%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D"><i class="fa fa-link"></i></a>動作確認</h2>
+    
+    <p>⌘+Bで、Bulidをしてください。<br>
+    SwiftLintの動作確認が出来ましたら、<strong>これで導入は終わりです！</strong><br>
+    お疲れ様でしたm(_ _)m</p>
+    
+    <h1>
+        <span id="swiftlintを導入したことによって改善されたポイント" class="fragment"></span><a href="#swiftlint%E3%82%92%E5%B0%8E%E5%85%A5%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E6%94%B9%E5%96%84%E3%81%95%E3%82%8C%E3%81%9F%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88"><i class="fa fa-link"></i></a>SwiftLintを導入したことによって、改善されたポイント</h1>
+    
+    <h2>
+        <span id="ifforwhile等の括弧" class="fragment"></span><a href="#ifforwhile%E7%AD%89%E3%81%AE%E6%8B%AC%E5%BC%A7"><i class="fa fa-link"></i></a>if,for,while等の括弧</h2>
+    
+    <p>スタイルガイドに従うと、<strong>if,for,while</strong>は<strong>括弧で囲みません</strong>。<br>
+    しかし、他の言語と同時に進めると、ついつい囲っちゃう時があるんですが、<br>
+    SwiftLintを導入すると撲滅出来ます！</p>
+    
+    <div class="code-frame" data-lang="swift"><div class="highlight"><pre><span class="err">×</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">}</span>
+        <span class="err">○</span>
+        <span class="k">if</span> <span class="nb">true</span> <span class="p">{</span>
+        <span class="p">}</span>
+    </pre></div></div>
+    
+    <h2>
+        <span id="セミコロン" class="fragment"></span><a href="#%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%AD%E3%83%B3"><i class="fa fa-link"></i></a>セミコロン</h2>
+    
+    <p>スタイルガイドに従うと、<strong>文末にセミコロンは書きません</strong>。<br>
+    しかし、上記に書いたのと同じでセミコロンが必須の言語があるので、ついつい癖で・・ってのがあると思いますが、これも撲滅出来ます</p>
+    
+    <div class="code-frame" data-lang="swift"><div class="highlight"><pre><span class="err">×</span>
+        <span class="k">let</span> <span class="n">hoge</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="err">○</span>
+        <span class="k">let</span> <span class="n">hoge</span> <span class="o">=</span> <span class="mi">0</span>
+    </pre></div></div>
+    
+    <h2>
+        <span id="空白" class="fragment"></span><a href="#%E7%A9%BA%E7%99%BD"><i class="fa fa-link"></i></a>空白</h2>
+    
+    <p>これは静的解析に任せないと、どこかは大体空白を忘れてる箇所があると思います。<br>
+    細かいことですが、空白の位置は統一させましょう。</p>
+    
+    <div class="code-frame" data-lang="swift"><div class="highlight"><pre><span class="err">×</span>
+        <span class="k">class</span> <span class="nl">Hoge</span><span class="p">:</span> <span class="bp">NSObject</span><span class="p">{</span>
+        <span class="p">}</span>
+        <span class="err">○</span>
+        <span class="k">class</span> <span class="nl">Hoge</span><span class="p">:</span> <span class="bp">NSObject</span> <span class="p">{</span>
+        <span class="p">}</span>
+    </pre></div></div>
+    
+    <hr>
+    
+    <p>以上、一例を挙げましたが、その他にも<strong>変数の文字数</strong>など色々解析してくれます。<br>
+    チーム開発する時にコーディングルールがあると、非常に有用なので是非導入していきましょう！</p>
+    
+    <h1>
+        <span id="カスタム" class="fragment"></span><a href="#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0"><i class="fa fa-link"></i></a>カスタム</h1>
+    
+    <p>SwiftLintには、Configureファイルに<br>
+    <strong>どのファイルに静的解析を行うか、ルール毎にOn/Offを指定したり、制限する文字数の変更が出来ます</strong>。</p>
+    
+    <h2>
+        <span id="configure設定" class="fragment"></span><a href="#configure%E8%A8%AD%E5%AE%9A"><i class="fa fa-link"></i></a>Configure設定</h2>
+    
+    <p>ルートディレクトリに<code>.swiftlint.yml</code>ファイルを追加します。<br>
+    公式にどのような項目を設定出来るのか記載してありますので、カスタマイズしていきましょう。<br>
+    <a href="https://github.com/realm/SwiftLint#configuration" class="autolink">https://github.com/realm/SwiftLint#configuration</a></p>
+    
+    <p>以下、僕のConfigureの設定情報です。<br>
+    よければ参考にしてください！</p>
+    
+    <div class="code-frame" data-lang="yaml"><div class="highlight"><pre><span class="c1"># 無効にするルール</span>
+        <span class="l-Scalar-Plain">disabled_rules</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">trailing_whitespace</span> <span class="c1"># 余分に改行がある方が視認性が上がる為、無効</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type_name</span> <span class="c1"># クラス名は長くして情報を詰めておく必要もある為、無効</span>
+        
+        <span class="c1"># ルール一覧を表示</span>
+        <span class="c1">#- colon</span>
+        <span class="c1">#- control_statement</span>
+        <span class="c1">#- file_length</span>
+        <span class="c1">#- force_cast</span>
+        <span class="c1">#- function_body_length</span>
+        <span class="c1">#- leading_whitespace</span>
+        <span class="c1">#- line_length</span>
+        <span class="c1">#- nesting</span>
+        <span class="c1">#- operator_whitespace</span>
+        <span class="c1">#- return_arrow_whitespace</span>
+        <span class="c1">#- todo</span>
+        <span class="c1">#- trailing_newline</span>
+        <span class="c1">#- variable_name_max_length</span>
+        <span class="c1">#- variable_name_min_length</span>
+        <span class="c1">#- type_body_length</span>
+        <span class="c1">#- variable_name</span>
+        
+        <span class="c1"># 一行の文字列制限を100文字から300文字に変更</span>
+        <span class="l-Scalar-Plain">line_length</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">300</span>
+        
+        <span class="l-Scalar-Plain">excluded</span><span class="p-Indicator">:</span> <span class="c1"># Lint対象から外すファイルのあるパスを記述</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Pods</span>
+        
+        <span class="c1"># クラスの行数</span>
+        <span class="l-Scalar-Plain">type_body_length</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">200</span> <span class="c1"># warning</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">400</span> <span class="c1"># error</span>
+        
+        <span class="c1"># 変数名の最大文字数</span>
+        <span class="l-Scalar-Plain">variable_name_max_length</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">60</span> <span class="c1"># warning</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">80</span> <span class="c1"># error</span>
+        
+        <span class="c1"># 変数名の最小文字数</span>
+        <span class="l-Scalar-Plain">variable_name_min_length</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">1</span> <span class="c1"># warning</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">0</span> <span class="c1"># error</span>
+        
+        <span class="c1"># 関数の長さ</span>
+        <span class="l-Scalar-Plain">function_body_length</span><span class="p-Indicator">:</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">100</span> <span class="c1"># warning</span>
+        <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">200</span> <span class="c1"># error</span>
+    </pre></div></div>
+    
+    <h1>
+        <span id="感想" class="fragment"></span><a href="#%E6%84%9F%E6%83%B3"><i class="fa fa-link"></i></a>感想</h1>
+    
+    <p>SwiftLintのバージョン<strong>0.2.0</strong>から、<strong>Configure</strong>を設定できるようになり、<br>
+    やっと実用できるようになりました。<br>
+    <strong>0.2.0</strong>から<strong>0.4.0</strong>までのバージョンアップは本当に早く、<br>
+    今後もどんどん成長していく<strong>Hotな静的解析ツール</strong>ではないでしょうか。</p>
+    
+    <h1>
+        <span id="引用元--参考" class="fragment"></span><a href="#%E5%BC%95%E7%94%A8%E5%85%83--%E5%8F%82%E8%80%83"><i class="fa fa-link"></i></a>引用元 &amp; 参考</h1>
+    
+    <p>SwiftLint : <a href="https://github.com/realm/SwiftLint" class="autolink">https://github.com/realm/SwiftLint</a><br>
+    MacにHomebrewをインストールする：<a href="http://qiita.com/_daisuke/items/d3b2477d15ed2611a058" class="autolink">http://qiita.com/_daisuke/items/d3b2477d15ed2611a058</a><br>
+    SwiftLintを試してみた : <a href="http://qiita.com/ushisantoasobu/items/b494c9cf7d78a968b373" class="autolink">http://qiita.com/ushisantoasobu/items/b494c9cf7d78a968b373</a><br>
+    Swift スタイルガイド：<a href="https://github.com/github/swift-style-guide" class="autolink">https://github.com/github/swift-style-guide</a></p>
+    <div class="hidden"><form class="js-task-list-update" action="/syamaoka/items/2edfe315940d91846bf0" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="R+h46n/kt4F4hYngNcb5Wd8XASv/JLvQWq64eEMw70cP7W2N3LnxMaUSdRESte6zpNVnUy6lntnoc03e+CwICw=="><input type="hidden" name="updated_at_confirmation_in_unixtime" id="updated_at_confirmation_in_unixtime" value="1447982099" class="js-task-list-updated-at"><textarea name="raw_body" id="raw_body" class="js-task-list-field"># 最初に
+        この記事は、**Mac**に**SwiftLint**を導入する方法を記載した記事です。
+        記載時(2015/11/20)のバージョンは下記の通りです。
+        
+        |対象  |バージョン  |
+        |---|---|
+        |SwiftLint|0.4.0|
+        |XCode|7.1.1|
+        |Mac|10.11.1|
+        |Homebrew|0.9.5|
+        
+        # 導入方法
+        ## Homebrewをインストールする
+        ### Homebrewをお持ちでない方
+        [MacにHomebrewをインストールする](http://qiita.com/_daisuke/items/d3b2477d15ed2611a058)
+        上記のURLにMacにHomebrewをインストールする方法が記載されていますので、
+        インストールしてください。
+        
+        ### Homebrewをお持ちの方
+        念のため、`Homebrew`の`update`を行ってください
+        
+        ```bash
+        brew update
+        ```
+        
+        正常に`Homebrew`の`update`を行えた後に、念のためバージョンをご確認ください。
+        **2015/11/20**時点の最新バージョンは **0.9.5** です。
+        
+        ```bash
+        brew --version
+        0.9.5 (git revision 7714; last commit 2015-11-19)
+        ```
+        
+        ## SwiftLintをインストールする
+        ターミナルで下記のコマンドを入力して、実行してください。
+        
+        ```bash
+        brew install swiftlint
+        ```
+        
+        ### SwiftLintのインストールした時のログ
+        
+        ```bash
+        [syamaoka] brew install swiftlint
+        ==&gt; Downloading https://homebrew.bintray.com/bottles/swiftlint-0.4.0.el_capitan.bottle.tar.gz
+        ######################################################################## 100.0%
+        ==&gt; Pouring swiftlint-0.4.0.el_capitan.bottle.tar.gz
+        🍺  /usr/local/Cellar/swiftlint/0.4.0: 215 files, 55M
+        [syamaoka] swiftlint version
+        0.4.0
+        ```
+        SwiftLintのバージョンが**0.4.0**であることを確認出来れば、SwiftLintのインストール完了です！
+        
+        &lt;font color=red&gt;※注意：SwiftLintのバージョンが低い場合はConfigureを設定できない場合があるので、最新のものを入れるのを推奨致します。&lt;font&gt;
+        
+        ## XCodeのビルド時にLintされるように設定する
+        1. SwiftLintを適用したいプロジェクトを開きます
+        2. `TARGETS-&gt;Bulid Phases`を開きます
+        3. 左上にある+ボタンをクリックし`New Run Script Phase`をクリックします。
+        4. `Run Script`の項目に、下記のスクリプトに置換するとBuild時に静的解析を行うようになります。
+        
+        ```sh
+        if which swiftlint &gt;/dev/null; then
+        swiftlint
+        else
+        echo "SwiftLint does not exist, download from https://github.com/realm/SwiftLint"
+        fi
+        ```
+        **画像で手順も用意したので、順番通りに設定していけば大丈夫です。**
+        &lt;img width="400" alt="swiftlint2.png" src="https://qiita-image-store.s3.amazonaws.com/0/30359/6533d39e-c609-e5da-95f6-237dda1f1564.png"&gt;
+        
+        公式のXcode設定ページ：https://github.com/realm/SwiftLint#configuration
+        
+        ## 動作確認
+        &amp;#x2318;+Bで、Bulidをしてください。
+        SwiftLintの動作確認が出来ましたら、**これで導入は終わりです！**
+        お疲れ様でしたm(_ _)m
+        
+        # SwiftLintを導入したことによって、改善されたポイント
+        ## if,for,while等の括弧
+        スタイルガイドに従うと、**if,for,while**は**括弧で囲みません**。
+        しかし、他の言語と同時に進めると、ついつい囲っちゃう時があるんですが、
+        SwiftLintを導入すると撲滅出来ます！
+        
+        ```swift
+        ×
+        if (true) {
+        }
+        ○ 
+        if true {
+        }
+        ```
+        ## セミコロン
+        スタイルガイドに従うと、**文末にセミコロンは書きません**。
+        しかし、上記に書いたのと同じでセミコロンが必須の言語があるので、ついつい癖で・・ってのがあると思いますが、これも撲滅出来ます
+        
+        ```swift
+        ×
+        let hoge = 0;
+        ○ 
+        let hoge = 0
+        ```
+        ## 空白
+        これは静的解析に任せないと、どこかは大体空白を忘れてる箇所があると思います。
+        細かいことですが、空白の位置は統一させましょう。
+        
+        ```swift
+        ×
+        class Hoge: NSObject{
+        }
+        ○
+        class Hoge: NSObject {
+        }
+        ```
+        ---
+        以上、一例を挙げましたが、その他にも**変数の文字数**など色々解析してくれます。
+        チーム開発する時にコーディングルールがあると、非常に有用なので是非導入していきましょう！
+        
+        # カスタム
+        SwiftLintには、Configureファイルに
+        **どのファイルに静的解析を行うか、ルール毎にOn/Offを指定したり、制限する文字数の変更が出来ます**。
+        
+        ## Configure設定
+        ルートディレクトリに`.swiftlint.yml`ファイルを追加します。
+        公式にどのような項目を設定出来るのか記載してありますので、カスタマイズしていきましょう。
+        https://github.com/realm/SwiftLint#configuration
+        
+        以下、僕のConfigureの設定情報です。
+        よければ参考にしてください！
+        
+        ```yaml
+        # 無効にするルール
+        disabled_rules:
+        - trailing_whitespace # 余分に改行がある方が視認性が上がる為、無効
+        - type_name # クラス名は長くして情報を詰めておく必要もある為、無効
+        
+        # ルール一覧を表示
+        #- colon
+        #- control_statement
+        #- file_length
+        #- force_cast
+        #- function_body_length
+        #- leading_whitespace
+        #- line_length
+        #- nesting
+        #- operator_whitespace
+        #- return_arrow_whitespace
+        #- todo
+        #- trailing_newline
+        #- variable_name_max_length
+        #- variable_name_min_length
+        #- type_body_length
+        #- variable_name
+        
+        # 一行の文字列制限を100文字から300文字に変更
+        line_length: 300
+        
+        excluded: # Lint対象から外すファイルのあるパスを記述
+        - Pods
+        
+        # クラスの行数
+        type_body_length:
+        - 200 # warning
+        - 400 # error
+        
+        # 変数名の最大文字数
+        variable_name_max_length:
+        - 60 # warning
+        - 80 # error
+        
+        # 変数名の最小文字数
+        variable_name_min_length:
+        - 1 # warning
+        - 0 # error
+        
+        # 関数の長さ
+        function_body_length:
+        - 100 # warning
+        - 200 # error
+        ```
+        
+        # 感想
+        SwiftLintのバージョン**0.2.0**から、**Configure**を設定できるようになり、
+        やっと実用できるようになりました。
+        **0.2.0**から**0.4.0**までのバージョンアップは本当に早く、
+        今後もどんどん成長していく**Hotな静的解析ツール**ではないでしょうか。
+        
+        # 引用元 &amp; 参考
+        SwiftLint : https://github.com/realm/SwiftLint
+        MacにHomebrewをインストールする：http://qiita.com/_daisuke/items/d3b2477d15ed2611a058
+        SwiftLintを試してみた : http://qiita.com/ushisantoasobu/items/b494c9cf7d78a968b373
+        Swift スタイルガイド：https://github.com/github/swift-style-guide
+    </textarea><input type="submit" name="commit" value="Save changes"></form></div>
+</body></html>

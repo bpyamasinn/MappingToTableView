@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		128452B7A75FC2AC76DFDAC93157F2AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		3491E7A91C1660F4CD5AF76002E8FC91 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 8403836B93EAE7DEA99931A0CFA6C7E7 /* ONOXMLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B7F29742C14661C8198B234958C1772 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 9493357B845670DECAE8B336717597A3 /* Ono.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63210E3EC6D54FF5CB235CEE782088E8 /* Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD77922558C29159B169B9E6A4FE4BE /* Ono-dummy.m */; };
+		65EEE49863E5B2C9941E688205D80B32 /* Pods-MappingToTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 643E2525452B3EBD6BD443D985C9EE3D /* Pods-MappingToTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DD806197B2246EFF7C6CB1FA0A4127F /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E01F20C6A0A3C6744B6D1DD928A810 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B7D44F175DE7D4ED5891B51D98ABDB5D /* Ono-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B431F090C02EA9A81C7085E8E15E994C /* Ono-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9C6BF1148D4F3D5B5CBF5CCC87FE7E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		BA403CEB04E38B88C406D531C6448B5D /* Pods-MappingToTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F492F6DE44BA9EDE98C77496C84AF /* Pods-MappingToTableView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8D2EA588F54DCE83D7A99867763F553 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E181BAB7DD5EA52AB518DFD835264D41;
+			remoteInfo = Ono;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1160F76B91F74155412D70F631FCCD65 /* Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ono-prefix.pch"; sourceTree = "<group>"; };
+		1905C69FBD6AFC69C526B791AE92418E /* Ono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB16927DF739150032A3C8F63ABD7B0 /* Pods-MappingToTableView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MappingToTableView-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F6F492F6DE44BA9EDE98C77496C84AF /* Pods-MappingToTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MappingToTableView-dummy.m"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		544908E468B8965B59E1A32FBD5030C6 /* Pods-MappingToTableView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MappingToTableView-resources.sh"; sourceTree = "<group>"; };
+		56D025125C865E77281FCD0A43DED694 /* Ono.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Ono.modulemap; sourceTree = "<group>"; };
+		643E2525452B3EBD6BD443D985C9EE3D /* Pods-MappingToTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MappingToTableView-umbrella.h"; sourceTree = "<group>"; };
+		6BD77922558C29159B169B9E6A4FE4BE /* Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ono-dummy.m"; sourceTree = "<group>"; };
+		702AAA6D24C0181C69B0B151361C8226 /* Pods-MappingToTableView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MappingToTableView-frameworks.sh"; sourceTree = "<group>"; };
+		7ED68B79BDC0E106235CFE4FE7B2F016 /* Pods-MappingToTableView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MappingToTableView-acknowledgements.plist"; sourceTree = "<group>"; };
+		8403836B93EAE7DEA99931A0CFA6C7E7 /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
+		88A9529256551B1883D447DEC33D36BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E846D7E3C17E0DCC059F76C4BC3EC3 /* Pods-MappingToTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MappingToTableView.modulemap"; sourceTree = "<group>"; };
+		9493357B845670DECAE8B336717597A3 /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
+		9C454F7349C6585D67EE0E76107AE096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B431F090C02EA9A81C7085E8E15E994C /* Ono-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ono-umbrella.h"; sourceTree = "<group>"; };
+		B466E63A402132BC98D8BA5931DDA96D /* Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ono.xcconfig; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEFFED54B5F1C97170A7BF374A5D87E4 /* Pods-MappingToTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MappingToTableView.release.xcconfig"; sourceTree = "<group>"; };
+		D0E01F20C6A0A3C6744B6D1DD928A810 /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
+		D6671648AF3C42F46D0BC2A6DB4A4446 /* Pods-MappingToTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MappingToTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		DCC7B7B8F928591D5664B34DA8842218 /* Pods_MappingToTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MappingToTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		493190CBB5F67060028E307ED9802786 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C6BF1148D4F3D5B5CBF5CCC87FE7E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6019CF1BBB915F359D8035E2FBC4E0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				128452B7A75FC2AC76DFDAC93157F2AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C0F5478CFD973F1E9D9812B879308CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A9529256551B1883D447DEC33D36BC /* Info.plist */,
+				56D025125C865E77281FCD0A43DED694 /* Ono.modulemap */,
+				B466E63A402132BC98D8BA5931DDA96D /* Ono.xcconfig */,
+				6BD77922558C29159B169B9E6A4FE4BE /* Ono-dummy.m */,
+				1160F76B91F74155412D70F631FCCD65 /* Ono-prefix.pch */,
+				B431F090C02EA9A81C7085E8E15E994C /* Ono-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Ono";
+			sourceTree = "<group>";
+		};
+		3D98335EC9B0BE8C1BD50628E17BFEB3 /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				9493357B845670DECAE8B336717597A3 /* Ono.h */,
+				8403836B93EAE7DEA99931A0CFA6C7E7 /* ONOXMLDocument.h */,
+				D0E01F20C6A0A3C6744B6D1DD928A810 /* ONOXMLDocument.m */,
+				2C0F5478CFD973F1E9D9812B879308CE /* Support Files */,
+			);
+			path = Ono;
+			sourceTree = "<group>";
+		};
+		55EE99ED7F8F259358A30E5BD50E0AD3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA45CAFBEC951BA470E0B2FAD75CDEC1 /* Pods-MappingToTableView */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8EE27BC9C04EA93AC847FE18200F8D58 /* Pods */,
+				D98CF043B03AA0312AD11017F3F69F6C /* Products */,
+				55EE99ED7F8F259358A30E5BD50E0AD3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8EE27BC9C04EA93AC847FE18200F8D58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D98335EC9B0BE8C1BD50628E17BFEB3 /* Ono */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA45CAFBEC951BA470E0B2FAD75CDEC1 /* Pods-MappingToTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9C454F7349C6585D67EE0E76107AE096 /* Info.plist */,
+				89E846D7E3C17E0DCC059F76C4BC3EC3 /* Pods-MappingToTableView.modulemap */,
+				1AB16927DF739150032A3C8F63ABD7B0 /* Pods-MappingToTableView-acknowledgements.markdown */,
+				7ED68B79BDC0E106235CFE4FE7B2F016 /* Pods-MappingToTableView-acknowledgements.plist */,
+				1F6F492F6DE44BA9EDE98C77496C84AF /* Pods-MappingToTableView-dummy.m */,
+				702AAA6D24C0181C69B0B151361C8226 /* Pods-MappingToTableView-frameworks.sh */,
+				544908E468B8965B59E1A32FBD5030C6 /* Pods-MappingToTableView-resources.sh */,
+				643E2525452B3EBD6BD443D985C9EE3D /* Pods-MappingToTableView-umbrella.h */,
+				D6671648AF3C42F46D0BC2A6DB4A4446 /* Pods-MappingToTableView.debug.xcconfig */,
+				CEFFED54B5F1C97170A7BF374A5D87E4 /* Pods-MappingToTableView.release.xcconfig */,
+			);
+			name = "Pods-MappingToTableView";
+			path = "Target Support Files/Pods-MappingToTableView";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D98CF043B03AA0312AD11017F3F69F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1905C69FBD6AFC69C526B791AE92418E /* Ono.framework */,
+				DCC7B7B8F928591D5664B34DA8842218 /* Pods_MappingToTableView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3994883DF83AAEF9D169F990478D9F78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7D44F175DE7D4ED5891B51D98ABDB5D /* Ono-umbrella.h in Headers */,
+				5B7F29742C14661C8198B234958C1772 /* Ono.h in Headers */,
+				3491E7A91C1660F4CD5AF76002E8FC91 /* ONOXMLDocument.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E81AE7AE5AB30C0438AEDEB8AE52634 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65EEE49863E5B2C9941E688205D80B32 /* Pods-MappingToTableView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		160B8B4A01A8260CF188A7D8DE55FDF7 /* Pods-MappingToTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DA44C25B22E52B23C7ABD7AAA432F5 /* Build configuration list for PBXNativeTarget "Pods-MappingToTableView" */;
+			buildPhases = (
+				DCF6C671C613E2B49E3F5E59C6EF05FF /* Sources */,
+				B6019CF1BBB915F359D8035E2FBC4E0B /* Frameworks */,
+				4E81AE7AE5AB30C0438AEDEB8AE52634 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37403EAF2F1AC4497A8DA8CDDB70A133 /* PBXTargetDependency */,
+			);
+			name = "Pods-MappingToTableView";
+			productName = "Pods-MappingToTableView";
+			productReference = DCC7B7B8F928591D5664B34DA8842218 /* Pods_MappingToTableView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E181BAB7DD5EA52AB518DFD835264D41 /* Ono */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85465DCFA1C1D500B3D7C2DD86B53EB1 /* Build configuration list for PBXNativeTarget "Ono" */;
+			buildPhases = (
+				681CA2C9EB0EA2E6AC84AC6218A60618 /* Sources */,
+				493190CBB5F67060028E307ED9802786 /* Frameworks */,
+				3994883DF83AAEF9D169F990478D9F78 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ono;
+			productName = Ono;
+			productReference = 1905C69FBD6AFC69C526B791AE92418E /* Ono.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D98CF043B03AA0312AD11017F3F69F6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E181BAB7DD5EA52AB518DFD835264D41 /* Ono */,
+				160B8B4A01A8260CF188A7D8DE55FDF7 /* Pods-MappingToTableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		681CA2C9EB0EA2E6AC84AC6218A60618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63210E3EC6D54FF5CB235CEE782088E8 /* Ono-dummy.m in Sources */,
+				6DD806197B2246EFF7C6CB1FA0A4127F /* ONOXMLDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF6C671C613E2B49E3F5E59C6EF05FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA403CEB04E38B88C406D531C6448B5D /* Pods-MappingToTableView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37403EAF2F1AC4497A8DA8CDDB70A133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Ono;
+			target = E181BAB7DD5EA52AB518DFD835264D41 /* Ono */;
+			targetProxy = E8D2EA588F54DCE83D7A99867763F553 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2729A9B7E1AF393547ADE95603B315F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEFFED54B5F1C97170A7BF374A5D87E4 /* Pods-MappingToTableView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MappingToTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MappingToTableView/Pods-MappingToTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MappingToTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		447EEB5623657BDB17EB8B7251883DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6671648AF3C42F46D0BC2A6DB4A4446 /* Pods-MappingToTableView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MappingToTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MappingToTableView/Pods-MappingToTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MappingToTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C91067331016ADCDC2E865A3BC53439D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B466E63A402132BC98D8BA5931DDA96D /* Ono.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ono/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Ono/Ono.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Ono;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD5444F53FCC7C4CD4E7A04D76A67F2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B466E63A402132BC98D8BA5931DDA96D /* Ono.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ono/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Ono/Ono.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Ono;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14DA44C25B22E52B23C7ABD7AAA432F5 /* Build configuration list for PBXNativeTarget "Pods-MappingToTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				447EEB5623657BDB17EB8B7251883DF5 /* Debug */,
+				2729A9B7E1AF393547ADE95603B315F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85465DCFA1C1D500B3D7C2DD86B53EB1 /* Build configuration list for PBXNativeTarget "Ono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD5444F53FCC7C4CD4E7A04D76A67F2B /* Debug */,
+				C91067331016ADCDC2E865A3BC53439D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
